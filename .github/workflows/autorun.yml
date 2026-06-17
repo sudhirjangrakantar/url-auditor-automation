@@ -30,7 +30,7 @@ jobs:
           # Download the Auto ZIP from the latest release of the SOURCE repo
           # Replace YOUR_GITHUB_USERNAME/url-auditor-automation with the actual private/public repo name
           $release = Invoke-RestMethod `
-            -Uri "https://api.github.com/repos/sudhirjangrakantar/url-auditor-automation/releases/latest" `
+            -Uri "https://github.com/sudhirjangra/url-auditor-pro/releases/latest" `
             -Headers @{ Authorization = "Bearer $env:GH_TOKEN"; "User-Agent" = "url-auditor-auto" }
 
           $asset = $release.assets | Where-Object { $_.name -like "URL-Auditor-Auto-*.zip" } | Select-Object -First 1
