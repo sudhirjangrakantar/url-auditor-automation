@@ -83,4 +83,5 @@ jobs:
           git add "$env:OUTPUT_FOLDER"
           git diff --cached --quiet && echo "Nothing to commit" && exit 0
           git commit -m "audit: $env:OUTPUT_FOLDER"
+          git pull --rebase origin main
           git push
